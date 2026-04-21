@@ -14,3 +14,7 @@ Prompt 5:
 Told AI to change the first rectangle on the snake to be tan.
 AI made it correctly, but it caused the food to sometimes not appear.
 I couldn't figure out myself why it happened, because AI only changed one block of code and made it into a loop.
+
+Prompt 6:
+I told AI that once I ate the food more stopped appearing. Then I said try and find the fix to this problem.
+Result: It changed a few lines about the sie of the snake, which I knew wouldn't do anything.

@@ -41,6 +41,10 @@ class GamePanel extends JPanel implements ActionListener, KeyListener {
         y[1] = 10 * UNIT_SIZE;
         x[2] = 8 * UNIT_SIZE;
         y[2] = 10 * UNIT_SIZE;
+        for (int i = bodyParts; i < x.length; i++) {
+            x[i] = -UNIT_SIZE;
+            y[i] = -UNIT_SIZE;
+        }
         newApple();
         timer = new Timer(150, this);
         timer.start();
@@ -173,6 +177,10 @@ class GamePanel extends JPanel implements ActionListener, KeyListener {
         y[1] = 10 * UNIT_SIZE;
         x[2] = 8 * UNIT_SIZE;
         y[2] = 10 * UNIT_SIZE;
+        for (int i = bodyParts; i < x.length; i++) {
+            x[i] = -UNIT_SIZE;
+            y[i] = -UNIT_SIZE;
+        }
         newApple();
         timer.start();
     }
