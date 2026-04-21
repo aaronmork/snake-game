@@ -23,3 +23,8 @@ Prompt 7:
 I asked AI to create 2 bombs when the pellets were added in. I told it to make the color block. I asked it to end the game if the snake hit any bombs.
 Result: It added new variable for newBombs. This results in many errors, the biggest being the game now doesn't appear when I run the code.
 Debugging: I found a few areas where it said the code was wrong and fixed it to its liking. But the code didn't budge
+
+Prompt 8:
+I told AI that the game wouldn't run. I copy and pasted the error message and asked it to fix it.
+Result: It reworked the pellet and bomb section into more advanced loop systems. But this however came with a variable issue.
+Debugging: It took me a few fixs to the variables to make them into booleans. But this did not allow the code to run aswell so I wasn't sure where to go. The code had no errors but just didn't compile and run.

@@ -58,9 +58,52 @@ class GamePanel extends JPanel implements ActionListener, KeyListener {
     }
 
     private void newBombs() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'newBombs'");
-    }
+        for (int b = 0; b < 2; b++) {
+            boolean valid = false;
+            while (!valid) {
+                bombX[b] = random.nextInt(SCREEN_WIDTH / UNIT_SIZE) * UNIT_SIZE;
+                bombY[b] = random.nextInt(SCREEN_HEIGHT / UNIT_SIZE) * UNIT_SIZE;
+                valid = true;
+                for (int i = 0; i < bodyParts; i++) {
+                    if (x[i] == bombX[b] && y[i] == bombY[b]) {
+                        valid = false;
+                        break;
+                    }
+                }
+                if (appleX == bombX[b] && appleY == bombY[b]) {
+                    valid = false;
+                }
+                for (int ob = 0; ob < 2; ob++) {
+                    if (ob != b && bombX[ob] == bombX[b] && bombY[ob] == bombY[b]) {
+                        valid = false;
+                        break;
+                    }
+                }
+            }
+        }
+            while (!isValid()) {
+                int b = 0;
+                bombX[b] = random.nextInt(SCREEN_WIDTH / UNIT_SIZE) * UNIT_SIZE;
+                bombY[b] = random.nextInt(SCREEN_HEIGHT / UNIT_SIZE) * UNIT_SIZE;
+                boolean valid = true;
+                for (int i = 0; i < bodyParts; i++) {
+                    if (x[i] == bombX[b] && y[i] == bombY[b]) {
+                        valid = false;
+                        break;
+                    }
+                }
+                if (appleX == bombX[b] && appleY == bombY[b]) {
+                    valid = false;
+                }
+                for (int ob = 0; ob < 2; ob++) {
+                    if (ob != b && bombX[ob] == bombX[b] && bombY[ob] == bombY[b]) {
+                        valid = false;
+                        break;
+                    }
+                }
+            }
+        }
+
 
     @Override
     protected void paintComponent(Graphics g) {
