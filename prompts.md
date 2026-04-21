@@ -18,3 +18,8 @@ I couldn't figure out myself why it happened, because AI only changed one block 
 Prompt 6:
 I told AI that once I ate the food more stopped appearing. Then I said try and find the fix to this problem.
 Result: It changed a few lines about the sie of the snake, which I knew wouldn't do anything.
+
+Prompt 7:
+I asked AI to create 2 bombs when the pellets were added in. I told it to make the color block. I asked it to end the game if the snake hit any bombs.
+Result: It added new variable for newBombs. This results in many errors, the biggest being the game now doesn't appear when I run the code.
+Debugging: I found a few areas where it said the code was wrong and fixed it to its liking. But the code didn't budge

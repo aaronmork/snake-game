@@ -29,9 +29,15 @@ class GamePanel extends JPanel implements ActionListener, KeyListener {
     private Random random;
     private int appleX;
     private int appleY;
+    private int[] bombX = new int[2];
+    private int[] bombY = new int[2];
 
     public GamePanel() {
         random = new Random();
+        for (int b = 0; b < 2; b++) {
+            bombX[b] = -UNIT_SIZE;
+            bombY[b] = -UNIT_SIZE;
+        }
         setBackground(Color.DARK_GRAY);
         setFocusable(true);
         addKeyListener(this);
@@ -46,8 +52,14 @@ class GamePanel extends JPanel implements ActionListener, KeyListener {
             y[i] = -UNIT_SIZE;
         }
         newApple();
+        newBombs();
         timer = new Timer(150, this);
         timer.start();
+    }
+
+    private void newBombs() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'newBombs'");
     }
 
     @Override
@@ -160,6 +172,12 @@ class GamePanel extends JPanel implements ActionListener, KeyListener {
             valid = true;
             for (int i = 0; i < bodyParts; i++) {
                 if (x[i] == appleX && y[i] == appleY) {
+                    valid = false;
+                    break;
+                }
+            }
+            for (int b = 0; b < 2; b++) {
+                if (appleX == bombX[b] && appleY == bombY[b]) {
                     valid = false;
                     break;
                 }
