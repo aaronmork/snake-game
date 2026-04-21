@@ -72,8 +72,12 @@ class GamePanel extends JPanel implements ActionListener, KeyListener {
     }
 
     private void drawSnake(Graphics g) {
-        g.setColor(Color.GREEN);
         for (int i = 0; i < bodyParts; i++) {
+            if (i == 0) {
+                g.setColor(new Color(210, 180, 140)); // tan
+            } else {
+                g.setColor(Color.GREEN);
+            }
             g.fillRect(x[i], y[i], UNIT_SIZE, UNIT_SIZE);
         }
     }
